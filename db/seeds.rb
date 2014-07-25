@@ -14,9 +14,7 @@ end
 
 Question.all.each do |question|
 	4.times do
-		an = Answer.new(answer: Faker::Lorem.word)
-		question.answers << an
-		an.save
+		Answer.create(answer: Faker::Lorem.word, question: question)
 	end
 end
 
