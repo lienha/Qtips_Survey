@@ -3,7 +3,7 @@
 end
 
 User.all.each do |user|
-	Survey.create(title: Faker::Hacker.adjective, creator: user)
+	Survey.create(title: Faker::Name.title, creator: user)
 end
 
 Survey.all.each do |survey|
@@ -14,7 +14,9 @@ end
 
 Question.all.each do |question|
 	4.times do
-		Answer.create(answer: Faker::Lorem.word, question: question)
+		an = Answer.new(answer: Faker::Lorem.word)
+		question.answers << an
+		an.save
 	end
 end
 
