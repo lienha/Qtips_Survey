@@ -1,5 +1,5 @@
 # Welcome to Qtips Survey!
-
+![Q-tips](http://www.qtips.com/Skins/QTips/images/logo.png)
 ## Brought to you by Quy and others (Tim, Lienha, Jeremy)
 
 ### Links
