@@ -10,7 +10,7 @@ Use of the Q-TIPS survey is only for educational purposes and has no association
 [Trello Link](https://trello.com/b/8Tr8lGJL/survey-gorilla)
 
 ### Wireframing
-![Wireframing-part-1](https://trello-attachments.s3.amazonaws.com/53d2635f3e6f8e691dbe4934/53d270b6a56e0b438d787840/1186x874/7f0ea5bb91b338a04c8c52e586104f54/02ssurveypaths.png)
+![Imgur](http://i.imgur.com/PPLy2ZY.png)
 
 ### Team Dynamics
 
