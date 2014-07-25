@@ -1,0 +1,32 @@
+<h1>New account registration</h1>
+
+<% if @user.errors.any? %>
+  <div class="errors">
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<form action="/sign_up" method="post">
+  <div>
+    <label for="name">Name: </label>
+      <input id="name" type="text" name="user[name]" value="<%= @user.name %>">  
+  </div>
+
+  <div>
+    <label for="email">Email: </label>
+      <input id="email" type="text" name="user[email]" value="<%= @user.email %>">  
+  </div>
+
+  <div>
+    <label for="password">Password: </label>
+      <input id="password" type="password" name="user[password]">  
+  </div>
+
+  <div>
+    <input type="submit">  
+  </div>
+</form>
