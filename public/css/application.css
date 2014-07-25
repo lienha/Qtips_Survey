@@ -1,0 +1,9 @@
+body {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.container {
+	max-with: 600px;
+	margin: 0 auto;
+}
