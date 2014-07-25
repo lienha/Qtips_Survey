@@ -6,7 +6,8 @@ end
 post "/sign_up" do
   @user = User.new(params[:user])
   if @user.save
-    redirect to('/')
+    session[:user_id] = @user.id
+    redirect to('/users/welcome')
   else
     erb :"users/sign_up"
   end
