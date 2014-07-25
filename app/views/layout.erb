@@ -18,13 +18,16 @@
   <title></title>
 </head>
 <body>
-  <div>
-    <% if current_user %>
-        <%= erb :"users/sign_out" %>
-      <% else %>
-        <%= erb :"users/_sign_in_options" %>
-      <% end %>
-  </div>
+  <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <% if current_user %>
+          <li><a href="/">Log out</a></li>
+        <% else %>
+          <li><a href="/">Register</a></li>
+        <% end %>
+      </ul>
+    </nav>
   <div class="container">
     <%= yield %>
   </div>
