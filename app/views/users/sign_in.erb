@@ -1,0 +1,28 @@
+<h1>Welcome to Qtips Survey!</h1>
+
+<h3>Please sign-in to take a survey</h3>
+<% if @error %>
+  <div class="errors">
+    <p><%= @error %></p>
+  </div>
+<% end %>
+
+<form action="/sign_in" method="post">
+	<div>
+		<label for="email" >Email: </label>
+		<input id="email" type="email" name="user[email]">
+	</div>
+
+	<div>
+		<label for="password" >Password: </label>
+		<input id="password" type="password" name="user[password]">
+	</div>
+
+	<div>
+		<input type="submit">
+	</div>
+</form>
+
+<p>
+  Don't have an account? <a href="/sign_up">Sign up now</a>.
+</p>
