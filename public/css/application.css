@@ -15,6 +15,33 @@ body {
 	color: #1589FF;
 }
 
+.sign-in {
+	width: 50%;
+	text-align: left;
+}
+
+.sign-in-2 {
+	width: 50%;
+	text-align: center;
+}
+
+.sign-in-2 input {
+	display: block;
+	margin-top: 6px;
+	margin-left: 40%;
+	text-align: center;
+}
+
+form label {
+    width: 80px;
+    clear:left;
+    text-align:right;
+    padding-right:10px;
+}
+
+input, label {
+    float:left;
+}
 
 nav{
 	margin-left: 5.5%;

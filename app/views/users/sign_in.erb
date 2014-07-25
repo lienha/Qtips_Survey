@@ -9,23 +9,28 @@
 <% end %>
 
 <form action="/sign_in" method="post">
-	<div>
-		<label for="email" >Email: </label>
+	<div class="sign-in">
+		<label for="email" >Email</label>
 		<input id="email" type="email" name="user[email]">
 	</div>
 
-	<div>
-		<label for="password" >Password: </label>
+	<div class="sign-in">
+		<label for="password" >Password</label>
 		<input id="password" type="password" name="user[password]">
 	</div>
 	<br/>
-	<div>
-		<input type="submit">
+	<br/>
+	<br/>
+	<br/>
+	<div class="sign-in-2">
+		<input type="submit" value="Sign in">
+		<br/>
+		<br/>
+		<br/>
+		<p>Don't have an account? <br/><a href="/sign_up">Register now</a></p>
 	</div>
 </form>
 
-<p>
-  Don't have an account? <br/><a href="/sign_up">Register now</a>.
-</p>
+
 
 </center>
