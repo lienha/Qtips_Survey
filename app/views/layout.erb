@@ -22,14 +22,16 @@
       <ul>
         <li><a href="/">Home</a></li>
         <% if current_user %>
-          <li><a href="/">Log out</a></li>
+          <li><a href="/sign_out">Log out</a></li>
         <% else %>
-          <li><a href="/">Register</a></li>
+          <li><a href="/sign_up">Register</a></li>
         <% end %>
       </ul>
     </nav>
   <div class="container">
+    <center>
     <%= yield %>
+  </center>
   </div>
 </body>
 </html>

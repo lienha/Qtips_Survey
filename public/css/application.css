@@ -9,6 +9,7 @@ body {
 	margin: 0 auto;
 	margin-top: 10px;
 	border: groove;
+	padding-bottom: 10px;
 }
 
 .container p a {
@@ -78,4 +79,13 @@ nav a, a:visited{
 nav a:hover{
 	color:  #00D5FF;
 	text-decoration: none;
+}
+
+.clearfix:after{
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	height: 0;
+	line-height: 0;
 }
