@@ -10,11 +10,6 @@ $(function(){
 			$('.all-surveys').remove();
 		}, "html")
 
-		// $.post(url, answer, function(data){
-		// 	$('.show').remove();
-		// 	console.log(data);
-		// 	$('center').append(data);
-		// }, 'html');
 
 	});
 

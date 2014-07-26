@@ -145,6 +145,11 @@ nav {
   top:1px;
 }
 
+.win {
+  width: 500px;
+  height: 330px;
+  background: url('http://i.imgur.com/GM3AzNm.jpg');
+}
 .questions {
   text-align: left;
   margin-left: 16%;
