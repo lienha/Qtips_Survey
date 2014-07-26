@@ -20,7 +20,11 @@ get "/sign_in" do
 end
 
 get '/users/welcome' do
-  erb :"/users/welcome"
+  if current_user
+    erb :"/users/welcome"
+  else
+    erb :"users/sign_up"
+  end
 end
 
 post "/sign_in" do
@@ -34,7 +38,7 @@ post "/sign_in" do
   end
 end
 
-delete "/sign_out" do
-  session.delete(:user_id)
+get "/sign_out" do
+  session.clear
   redirect to('/')
 end
