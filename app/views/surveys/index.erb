@@ -1,5 +1,5 @@
 <h1>All surveys</h1>
-<ul>
+<ul id="survey-list">
 <% @surveys.each do |survey| %>
 
 	<li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
