@@ -1,6 +1,6 @@
 $(function(){
 
-	$('a').on('click', function(event){
+	$('.container').on('click', 'a', function(event){
 		event.preventDefault();
 
 		var url = $(this).attr('href');
