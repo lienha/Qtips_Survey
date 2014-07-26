@@ -3,6 +3,13 @@ get '/surveys' do
 	erb :"surveys/index"
 end
 
+get "/surveys/stats" do
+	current_user
+	@samples = Sample.where(voter: @user)
+	
+	erb :'surveys/stats'
+end
+
 get '/surveys/:survey_id' do
 	current_user
 	@survey = Survey.find(params[:survey_id]) 
@@ -20,6 +27,7 @@ end
 # 	@answers = @question.answers
 # 	erb :"surveys/show"
 # end
+
 
 post '/surveys/:survey_id/questions/:question_id' do
 	find_current_question(params[:answer_id])

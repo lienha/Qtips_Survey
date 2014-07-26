@@ -1,18 +1,28 @@
-<h1>[user_name], these are your answers so far...</h1>
+<h1><%= current_user.name %>, this is what you have done so far...</h1>
 
-<table>
-	<thead>
-		<tr>
-			<th>Question</th>
-			<th>Answer</th>
-		</tr>
-	</thead>
+<% @samples.each do |sample|%>
+	<h2><%= Survey.find(sample.survey_id).title %></h2>
+	<table>
 
-	<tbody>
-		<tr>
-			<td>Do you wet the bed?</td>
-			<td>No</td>
-		</tr>
-	</tbody>
-</table>
+		<thead>
+			<tr>
+				<th class="left_col">Questions</th>
+				<th class="right_col">Answers</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<% sample.responses.each do |response| %>
+			<tr>
+				<td class="left_col"><%= response.answer.question.question %></td>
+				<td class="right_col"><%= response.answer.answer %></td>
+			</tr>
+			<%end%>
+		</tbody>
+		
+	</table>
+
+<%end%>
+
+
 
