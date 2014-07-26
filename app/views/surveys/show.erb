@@ -1,16 +1,20 @@
-<h2><%= @question.question %></h2>
+<div class="show">
+	<script src="/js/sample.js"></script>
 
-<div class="clearfix">
-	<form class="survey-form" action="/surveys/<%= @survey.id %>/questions/<%= @question.id%>" method="post">
-	<% i = 0 %>
-	<div class="radio-toolbar">
-		<% @answers.each do |ans| %>
-			<input type="radio" id="radio<%= i %>" name="answer[selection]" value="<%= ans.answer %>">
-			<label for="radio<%= i %>"><%= ans.answer %></label><br>
-			<% i += 1 %>
-		<% end %>
-		<input type="submit" value="next question">
+	<h2><%= @question.question %></h2>
+
+	<div class="clearfix">
+		<form class="survey-form" action="/surveys/<%= @survey.id %>/questions/<%= @question.id%>" method="post">
+		<% i = 0 %>
+		<div class="radio-toolbar">
+			<% @answers.each do |ans| %>
+				<input type="radio" id="radio<%= i %>" name="answer" value="<%= ans.id %>">
+				<label for="radio<%= i %>"><%= ans.answer %></label><br>
+				<% i += 1 %>
+			<% end %>
+			<input type="submit" value="next question">
+		</div>
+		</form>
 	</div>
-	</form>
 </div>
 
