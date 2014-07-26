@@ -5,11 +5,11 @@ end
 
 get '/surveys/:survey_id' do
 	current_user
-	@sample = Sample.where(voter: @user, survey: @survey)
-	unless @sample.empty?
-		redirect 'surveys/stats'
-	end
 	@survey = Survey.find(params[:survey_id]) 
+	@sample = Sample.where(voter: @user, survey: @survey)
+	if !@sample.empty?
+		return redirect 'surveys/stats'
+	end
 	Sample.create(voter: @user, survey: @survey)
 	@question = @survey.questions.first
 	@answers = @question.answers
