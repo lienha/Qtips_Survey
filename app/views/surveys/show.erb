@@ -1,15 +1,16 @@
 <h2><%= @question.question %></h2>
 
+<div class="clearfix">
+	<form class="survey-form" action="/surveys/<%= @survey.id %>/questions/<%= @question.id%>" method="post">
+	<% i = 0 %>
+	<div class="radio-toolbar">
+		<% @answers.each do |ans| %>
+			<input type="radio" id="radio<%= i %>" name="answer[selection]" value="<%= ans.answer %>">
+			<label for="radio<%= i %>"><%= ans.answer %></label><br>
+			<% i += 1 %>
+		<% end %>
+		<input type="submit" value="next question">
+	</div>
+	</form>
+</div>
 
-<form action="/surveys/<%= @survey.id %>/questions/<%= @question.id%>" method="post">
-
-<% @answers.each do |ans| %>
-	<input type="radio" name="answer[selection]" value="<%= ans.answer %>"><%= ans.answer %><br>
-
-<% end %>
-<input type="submit" value="next question">
-</form>
-
-
-<!-- <a href="#">Previous Question</a> -->
-<a href="#">Next Question</a>

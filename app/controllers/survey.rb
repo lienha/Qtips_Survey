@@ -21,7 +21,7 @@ end
 post '/surveys/:survey_id/questions/:question_id' do
 	survey = params[:survey_id]
 	question = params[:question_id]
-	if !question_count(question)
+	if question_count(question)
 		next_question = question.to_i + 1
 		redirect "/surveys/#{survey}/questions/#{next_question}"
 	else
