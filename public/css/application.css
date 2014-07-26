@@ -38,8 +38,7 @@ form label {
   text-align: right;
   padding-right: 10px; }
 
-input, label {
-  float: left; }
+
 
 nav {
   margin: 5px 5.5% 0 5.5%;
@@ -139,12 +138,13 @@ nav {
   background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#634b30', endColorstr='#7d5d3b',GradientType=0);
   background-color:#634b30;
-  color: #00D5FF;
+  color: #FFFF99;
 }
 .myButton:active {
   position:relative;
   top:1px;
 }
+
 
 .left_col {
 	max-width: 70%;
@@ -161,4 +161,23 @@ tr:nth-child(even) {
 	max-width: 30%;
 	padding: 10px;
 	border: 1px;
+
+.win {
+  width: 500px;
+  height: 330px;
+  background: url('http://i.imgur.com/GM3AzNm.jpg');
+}
+.questions {
+  text-align: left;
+  margin-left: 16%;
+}
+
+.questions input {
+  width: 68%;
+}
+
+.questions .choices {
+  margin-left: 5%;
+  margin-bottom: 18px;
+
 }

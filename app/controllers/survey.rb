@@ -13,12 +13,17 @@ end
 get '/surveys/:survey_id' do
 	current_user
 	@survey = Survey.find(params[:survey_id]) 
-	Sample.find_or_create_by(voter: @user, survey: @survey)
+	@sample = Sample.where(voter: @user, survey: @survey)
+	if !@sample.empty?
+		return redirect 'surveys/stats'
+	end
+	Sample.create(voter: @user, survey: @survey)
 	@question = @survey.questions.first
 	@answers = @question.answers
 	erb :"surveys/show", layout: false
 end
 
+<<<<<<< HEAD
 # get '/surveys/:survey_id/questions/:question_id' do
 # 	survey = params[:survey_id]
 # 	question = params[:question_id]
@@ -29,7 +34,13 @@ end
 # end
 
 
+=======
+>>>>>>> f615e24fc836bdc78ce831be27c298e2bdf00d6d
 post '/surveys/:survey_id/questions/:question_id' do
+	current_user
+	@survey = Survey.find(params[:survey_id])
+	@answer = Answer.find(params[:answer_id])
+	save_response(@user, @survey, @answer)
 	find_current_question(params[:answer_id])
 	if question_count(@question)
 		next_question = @question.id + 1
@@ -38,8 +49,9 @@ post '/surveys/:survey_id/questions/:question_id' do
 		content_type = "html"
 		erb :"surveys/show", layout: false
 	else
+		complete_survey(@user, @survey)
 		@surveys = Survey.all
 		content_type = "html"
-		erb :"surveys/index", layout: false
+		erb :"surveys/complete", layout: false
 	end
 end
