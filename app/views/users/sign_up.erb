@@ -11,9 +11,11 @@
   </div>
 <% end %>
 
+<script src="/js/errors.js"></script>
+
 <div class="clearfix">
 
-  <form action="/sign_up" method="post">
+  <form name="sign_up" action="/sign_up" method="post">
     <div class="sign-in">
       <label for="name">Name </label>
         <input id="name" type="text" name="user[name]" value="<%= @user.name %>">  

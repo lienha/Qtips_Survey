@@ -15,6 +15,12 @@ body {
   .container p a {
     color: #1589FF; }
 
+#errors {
+  padding-left: 0; }
+  #errors li {
+    list-style-type: none;
+    color: red; }
+
 .sign-in {
   width: 50%;
   text-align: left; }
