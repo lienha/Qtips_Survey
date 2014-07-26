@@ -1,0 +1,15 @@
+<h2><%= @question.question %></h2>
+
+
+<form action="/surveys/<%= @survey.id %>/questions/<%= @question.id%>" method="post">
+
+<% @answers.each do |ans| %>
+	<input type="radio" name="answer[selection]" value="<%= ans.answer %>"><%= ans.answer %><br>
+
+<% end %>
+<input type="submit" value="next question">
+</form>
+
+
+<!-- <a href="#">Previous Question</a> -->
+<a href="#">Next Question</a>

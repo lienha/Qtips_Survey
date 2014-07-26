@@ -1,5 +1,8 @@
 <h1>All surveys</h1>
+<ul>
+<% @surveys.each do |survey| %>
 
-<p><a href="">Survey 1</a></p>
-<p><a href="">Survey 2</a></p>
-<p><a href="">Survey 3</a></p>
+	<li><a href="#"><%= survey.title %></a></li>
+
+<% end %>
+</ul>
