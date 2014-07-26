@@ -1,8 +1,12 @@
-<h1>All surveys</h1>
-<ul id="survey-list">
-<% @surveys.each do |survey| %>
+<div class="all-surveys">
+	<h1>All surveys</h1>
+	<script src="js/take.js"></script>
 
-	<li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+	<ul id="survey-list">
+	<% @surveys.each do |survey| %>
 
-<% end %>
-</ul>
+		<li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
+
+	<% end %>
+	</ul>
+</div>
