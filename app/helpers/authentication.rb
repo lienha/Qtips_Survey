@@ -14,6 +14,4 @@ helpers do
       redirect to('/')
     end
   end
-
-
 end
