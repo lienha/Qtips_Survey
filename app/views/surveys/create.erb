@@ -1,0 +1,29 @@
+<script src="/js/create.js"></script>
+<h1>Create a new survey</h1>
+<p>====================</p>
+<% count = 0 %>
+<form name="new-survey" action="/create" method="post">
+    <input type="text" name="title" placeholder="Title">
+    <br/>        
+
+<br/>
+<button id="add-question" type="button">Add a question</button>
+<br/>
+<div class="questions">
+  <ol>
+	<li class="q">Question:
+		<input type="text" name=""> <button class="remove-question" type="button">-</button>
+		<p>Choices:&nbsp;&nbsp;<button class="add-choice" type="button">+</button></p>
+		<ol class="choices" type="A">
+			<li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li>
+			<li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li>
+			<li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li>
+			<li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li>
+		</ol>
+	</li>
+  </ol>	
+</div>
+
+	<input type="submit" value="Submit">
+</form>
+
