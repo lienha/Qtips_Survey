@@ -1,28 +1,52 @@
-<h1><%= current_user.name %>, this is what you have done so far...</h1>
+<% if @taken %>
+	<h1><%= current_user.name %>, you have already taken this survey!</h1>
+	<p class="divider1"></p>
+	<h2><%= @title %></h2>
+		<table>
 
-<% @samples.each do |sample|%>
-	<h2><%= Survey.find(sample.survey_id).title %></h2>
-	<table>
+			<thead>
+				<tr>
+					<th class="left_col">Questions</th>
+					<th class="right_col">Answers</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<% @sample.last.responses.each do |response| %>
+				<tr>
+					<td class="left_col"><%= response.answer.question.question %></td>
+					<td class="right_col"><%= response.answer.answer %></td>
+				</tr>
+				<%end%>
+			</tbody>
+			
+		</table>
 
-		<thead>
-			<tr>
-				<th class="left_col">Questions</th>
-				<th class="right_col">Answers</th>
-			</tr>
-		</thead>
-		
-		<tbody>
-			<% sample.responses.each do |response| %>
-			<tr>
-				<td class="left_col"><%= response.answer.question.question %></td>
-				<td class="right_col"><%= response.answer.answer %></td>
-			</tr>
-			<%end%>
-		</tbody>
-		
-	</table>
+<% elsif @samples %>
+	<h1><%= current_user.name %>, this is what you have done so far...</h1>
+	<p class="divider1"></p>
+	<% @samples.each do |sample|%>
+		<h2><%= Survey.find(sample.survey_id).title %></h2>
+		<table>
 
-<%end%>
-
-
+			<thead>
+				<tr>
+					<th class="left_col">Questions</th>
+					<th class="right_col">Answers</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<% sample.responses.each do |response| %>
+				<tr>
+					<td class="left_col"><%= response.answer.question.question %></td>
+					<td class="right_col"><%= response.answer.answer %></td>
+				</tr>
+				<%end%>
+			</tbody>
+			
+		</table>
+		<p class="divider2"></p>
+	<%end%>
+<% end %>
 

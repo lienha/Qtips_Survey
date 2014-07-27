@@ -1,12 +1,13 @@
 <div class="all-surveys">
-	<h1>All surveys</h1>
+	<h1>Please choose a survey!</h1>
+	<p class="divider1"></p>
 	<script src="js/take.js"></script>
 
 	<ul id="survey-list">
 	<% @surveys.each do |survey| %>
 
 		<li><a href="/surveys/<%= survey.id %>"><%= survey.title %></a></li>
-
+		<p class="divider2"></p>
 	<% end %>
 	</ul>
 </div>

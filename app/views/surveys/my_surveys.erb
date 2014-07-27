@@ -1,0 +1,16 @@
+<% if @my_surveys.empty? %>
+	<h1><%= current_user.name %>, you have not created any survey yet!</h1>
+	<p class="divider1"></p>
+	<br/>
+	<form action="/create" method="GET">
+		<p><button class="myButton" type="submit">Create one now!</button></p>
+	</form>
+
+<% else %>
+	<h1><%= current_user.name %>, here are your surveys</h1>
+	<p class="divider1"></p>
+	<br/>
+
+
+<% end %>
+

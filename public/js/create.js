@@ -1,7 +1,7 @@
 $(function(){
   $('#add-question').on('click', function(event) {
     event.preventDefault();
-    $('.questions > ol').append('<li class="q">Question:<input type="text" name=""> <button class="remove-question" type="button">-</button><p>Choices:&nbsp;&nbsp;<button class="add-choice" type="button">+</button></p><ol class="choices" type="A"><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li></ol></li>');
+    $('.questions > ol').append('<li class="q">Question:&nbsp;<input type="text" name=""> <button class="remove-question" type="button">-</button><p>Choices:&nbsp;&nbsp;<button class="add-choice" type="button">+</button></p><ol class="choices" type="A"><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li><li><input type="text" name=""> <button class="remove-choice" type="button">-</button></li></ol></li>');
   });
 
   $('.questions').on('click', '.remove-question', function(event) {
