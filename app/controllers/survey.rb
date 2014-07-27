@@ -23,19 +23,6 @@ get '/surveys/:survey_id' do
 	erb :"surveys/show", layout: false
 end
 
-<<<<<<< HEAD
-# get '/surveys/:survey_id/questions/:question_id' do
-# 	survey = params[:survey_id]
-# 	question = params[:question_id]
-# 	@question = Question.find(question)
-# 	@survey = Survey.find(survey)
-# 	@answers = @question.answers
-# 	erb :"surveys/show"
-# end
-
-
-=======
->>>>>>> f615e24fc836bdc78ce831be27c298e2bdf00d6d
 post '/surveys/:survey_id/questions/:question_id' do
 	current_user
 	@survey = Survey.find(params[:survey_id])
