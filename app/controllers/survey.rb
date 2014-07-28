@@ -6,10 +6,10 @@ end
 get '/surveys/view' do 
   if current_user
     @my_surveys = @user.surveys
-  
+    # get each survey title, number of question and number of users taken the survey
     erb :"surveys/my_surveys"
   else
-    erb :"users/sign_in"
+    redirect '/'
   end
 end
 
