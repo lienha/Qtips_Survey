@@ -1,5 +1,5 @@
 <h1>New account registration</h1>
-
+<p class="divider2"></p><br/>
 
 <% if @user.errors.any? %>
   <div class="errors">
@@ -16,23 +16,9 @@
 <div class="clearfix">
 
   <form name="sign_up" action="/sign_up" method="post">
-    <div class="sign-in">
-      <label for="name">Name </label>
-        <input id="name" type="text" name="user[name]" value="<%= @user.name %>">  
-    </div>
-
-    <div class="sign-in">
-      <label for="email">Email </label>
-        <input id="email" type="text" name="user[email]" value="<%= @user.email %>">  
-    </div>
-
-    <div class="sign-in">
-      <label for="password">Password </label>
-        <input id="password" type="password" name="user[password]">  
-    </div>
-
-    <div class="sign-in-2">
-      <input type="submit">  
-    </div>
+    <input type="text" class="register" name="user[name]" placeholder="Name"><br/>
+    <input type="email" class="register" name="user[email]" placeholder="Email"><br/>
+    <input type="password" class="register" name="user[password]" placeholder="Password"><br/><br/><br/>
+    <input type="submit" class="myButton">  
   </form>
 </div>

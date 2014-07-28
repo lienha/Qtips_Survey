@@ -1,0 +1,63 @@
+<script src="/js/stat.js"></script>
+<% if @my_surveys.empty? %>
+	<h1><%= current_user.name %>, you have not created any survey yet!</h1>
+	<p class="divider1"></p>
+	<br/>
+	<form action="/create" method="GET">
+		<p><button class="myButton" type="submit">Create one now!</button></p>
+	</form>
+
+<% else %>
+	<h1><%= current_user.name %>, here are your surveys</h1>
+	<p class="divider2"></p>
+	<br/>
+	<table class="s-table">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Questions</th>
+				<th>Sample size</th>
+				<th>More stats</th>
+
+			</tr>
+		</thead>
+			
+		<tbody>
+			<% @my_surveys.each do |s| %>
+				<tr id="s-<%=s.id%>" class="s-stats">
+					<td><%= s.title %></td>
+					<td><%= s.questions.count %></td>
+					<td><%= s.samples.count %></td>
+					<td><button class="graphs" type="submit">View</button></td>
+
+					<div id="s-<%=s.id%>-tt" class="xstooltip">
+						<b>Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b> <%=s.title%><br/>
+						<b>Survey ID: </b> <%= s.id%><br/>
+						<b>Created at:</b> <%=s.created_at%><br/>
+						<p class="divider2"></p>
+						<b>Number of responses:</b> <%=s.samples.count%><br/>
+						<ol>
+						<% s.samples.each do |sam|%>
+							<li><%=User.find(sam.voter_id).name%></li>
+						<% end %>	
+						</ol>
+						<p class="divider2"></p>
+						<% if s.samples.count > 0 %>
+							<b>Most selected answers</b>
+							<ol>
+							<% s.questions.each do |q|%>
+								<li><%=q.question%><br/>
+									<%=q.most_answer[0]%> (<%=q.most_answer[1]%> times)</li>
+							<% end %>	
+							</ol>
+							<p class="divider2"></p>
+						<% end %>		
+						
+					</div>
+				</tr>	
+			<% end %>
+		</tbody>
+	</table>
+	<br/>	
+<% end %>
+

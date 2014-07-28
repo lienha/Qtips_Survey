@@ -63,7 +63,7 @@ nav {
     color: white;
     text-decoration: none; }
   nav a:hover {
-    color: #00D5FF;
+    color: #FFFF99;
     text-decoration: none; }
 
 .survey-form .radio-toolbar input[type="radio"] {
@@ -71,12 +71,17 @@ nav {
 .survey-form .radio-toolbar label {
   display: inline-block;
   margin: 0 0 10px 50px;
-  background-color: #ddd;
+  background-color: #FFFFE0;
+  color: black;
   padding: 4px 11px;
   font-family: Arial;
-  font-size: 16px; }
+  font-size: 16px; 
+  text-align: left;
+}
 .survey-form .radio-toolbar input[type="radio"]:checked + label {
-  background-color: #bbb; }
+  background-color: #634b30;
+  color: white;
+}
 .survey-form .radio-toolbar input[type=submit] {
   margin-left: 50px; }
 
@@ -91,8 +96,8 @@ nav {
       color: black;
       padding: 5px; }
     #survey-list li a:hover {
-      color: white;
-      background: black; }
+      color: #FFFF99;
+      background: #634b30; }
 
 .clearfix:after {
   content: ".";
@@ -165,7 +170,8 @@ tr:nth-child(even) {
 .win {
   width: 500px;
   height: 330px;
-  background: url('http://i.imgur.com/GM3AzNm.jpg');
+  background: url('http://www.quickmeme.com/img/21/21ebca9b7a2edddca763543a23d8c1ff7e9ff61ea0377db345511bf70e305ffb.jpg');
+  background-size: 500px 330px;
 }
 .questions {
   text-align: left;
@@ -181,3 +187,146 @@ tr:nth-child(even) {
   margin-bottom: 18px;
 
 }
+
+.divider1 {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+.divider2 {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#add-question {
+  margin-left: -45%;
+}
+
+ .inputs  { 
+-moz-border-radius: 5px; 
+-webkit-border-radius: 5px; 
+background-color: #EAEAEA; 
+background: -moz-linear-gradient(top, #FFF, #EAEAEA); 
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0, #FFF), color-stop(1.0, #EAEAEA)); 
+border: 1px solid #CACACA; 
+color: #444; 
+font-size: 1.4em; 
+margin: 0 0 25px; 
+padding: 5px 9px; 
+width:500px;
+margin-left: 5%; 
+} 
+ .inputs:focus { 
+background: #FFF;
+-webkit-box-shadow: 0 0 25px #CCC; 
+-moz-box-shadow: 0 0 25px #ccc; 
+box-shadow: 0 0 25px #CCC; 
+-webkit-transform: scale(1.05); 
+-moz-transform: scale(1.05); 
+transform: scale(1.05); 
+} 
+
+         
+inputs:-webkit-input-placeholder { 
+    color:    #b5b5b5; 
+} 
+ 
+inputs-moz-placeholder { 
+    color:    #b5b5b5; 
+} 
+ 
+.register  { 
+ width:270px; 
+padding: 15px 25px; 
+font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+font-weight: 400; 
+font-size: 14px; 
+color: #9D9E9E; 
+text-shadow: 1px 1px 0 rgba(256, 256, 256, 1.0); 
+background: #FFF; 
+border: 1px solid #FFF; 
+border-radius: 5px; 
+box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50); 
+-moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50); 
+-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.50); 
+} 
+.register:focus { 
+   background: #DFE9EC; 
+color: #414848; 
+box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25); 
+-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25); 
+-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25); 
+    outline:0; 
+} 
+  .register:hover   { 
+background: #DFE9EC; 
+color: #414848; 
+} 
+
+.s-table {
+  width: 88%;
+}
+
+.s-table th {
+  border-bottom: solid grey 1px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.s-table th:nth-child(1) {
+  text-align: left;
+  padding-left: 5px;
+}
+
+
+.s-table td {
+  border-bottom: solid grey 1px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.s-table td:nth-child(1) {
+  text-align: left;
+  padding-left: 5px;
+  width: 30%;
+}
+
+.xstooltip 
+{
+    visibility: hidden; 
+    position: absolute; 
+    top: 55px;  
+    margin-left: 58%; 
+    z-index: 2; 
+    font: normal 8pt sans-serif; 
+    padding: 3px; 
+    border: groove;
+    text-align: left;
+    background-color: white;
+    max-width: 25%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
